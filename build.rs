@@ -12,7 +12,7 @@ fn main() {
     writeln!(&mut nasty_rs, "pub fn is_even(number: u32) -> bool {{").unwrap();
     writeln!(&mut nasty_rs, "   match number  {{").unwrap();
     // Loop!
-    for i in 0..=(u32::MAX/1000) {
+    for i in 0..=(u32::MAX / 1000) {
         if i % 2 == 0 {
             writeln!(&mut nasty_rs, "  {i}  =>  true,    ").unwrap();
         } else {
@@ -20,6 +20,11 @@ fn main() {
         }
     }
     // Footer
+    writeln!(
+        &mut nasty_rs,
+        "  _  =>  panic!(\"Unsupported number\"),    "
+    )
+    .unwrap();
     writeln!(&mut nasty_rs, "   }}").unwrap();
     writeln!(&mut nasty_rs, " }}").unwrap();
 
