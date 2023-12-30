@@ -16,15 +16,10 @@ fn main() {
         if i % 2 == 0 {
             writeln!(&mut nasty_rs, "  {i}  =>  true,    ").unwrap();
         } else {
-            writeln!(&mut nasty_rs, "  {i}  =>  false,    ").unwrap();
         }
     }
     // Footer
-    writeln!(
-        &mut nasty_rs,
-        "  _  =>  panic!(\"Unsupported number\"),    "
-    )
-    .unwrap();
+    writeln!(&mut nasty_rs, "  _  =>  false,    ").unwrap();
     writeln!(&mut nasty_rs, "   }}").unwrap();
     writeln!(&mut nasty_rs, " }}").unwrap();
 
