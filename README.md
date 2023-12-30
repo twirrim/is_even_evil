@@ -15,3 +15,8 @@ At u32 / 100, it created a 1G file, and managed to consume about 50G of RAM (bet
 at u32 / 1000, it created a 104M file, and seems to be sitting steady at around 6G of memory consumption while compiling.  u32 / 1000 == 429,4967.
 
 If I get _really_ bored some day, I'll experiment with modifying that number and seeing how it maps to compilation time and memory consumption of rustc
+
+# Will it ever compile...?
+
+So far I've had it running on a machine for 3 days, and it's yet to finish compiling.  This seems to be a pathological case, albeit one no one will ever legitimately come across.. I think?
+I can't imagine any scenarios where you'd legitimately have 4,294,967 entries in a match statement, at compile time.
